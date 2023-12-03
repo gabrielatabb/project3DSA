@@ -1,5 +1,11 @@
 #include <iostream>
+#include <fstream>
 
 int main(){
-    std::cout << "Diego is a bitch. This is cool, i've never done this before." << std::endl;
+    std::ifstream data("100k-most-used-passwords-NCSC.txt");
+
+    if(!data.is_open()){
+        std::cout << "file failed to open";
+    }
+    return 0;
 }
